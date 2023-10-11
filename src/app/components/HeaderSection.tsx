@@ -29,10 +29,10 @@ const HeaderSection = () => {
                             repeat={Infinity}
                         /></h1>
                     <p className=" text-gray-400 text-base lg:text-x l mb-6 sm:text-lg">
-                        I am a Peruvian currently based in Argentina. I like art and technology.
+                        {`I am a Peruvian currently based in Argentina. I like art and technology.`}
                     </p>
                     <div>
-                        <button className="px-6 w-full lg:w-fit  py-3 rounded-full lg:mr-4 mr-0 bg-white border text-black hover:bg-transparent hover:text-slate-200 transition duration-300">Let's connect</button>
+                        <button className="px-6 w-full lg:w-fit  py-3 rounded-full lg:mr-4 mr-0 bg-white border text-black hover:bg-transparent hover:text-slate-200 transition duration-300">{`Let's connect`}</button>
                         <button className="px-6 transition ease-in-out w-full lg:w-fit py-3 duration-300 rounded-full border hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r hover:from-green-500 hover:text-black/50 hover:to-yellow-300 hover:shadow-slate-800 mt-3 delay-150 lg:mt-0">Download CV</button>
                     </div>
                 </div>

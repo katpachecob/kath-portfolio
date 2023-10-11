@@ -25,8 +25,8 @@ const CardInformation = ({ informationData }: TCardInformationProps) => {
                                             <p className='font-light text-md '>{info.name}</p>
                                             <div className='flex flex-wrap space-x-1'>
 
-                                                {info.description.map(item =>
-                                                    <p className='font-extralight text-sm'>{item}</p>)}
+                                                {info.description.map((item, key) =>
+                                                    <p  key={key} className='font-extralight text-sm'>{item}</p>)}
                                             </div>
 
                                         </div>
