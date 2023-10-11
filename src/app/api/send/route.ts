@@ -1,22 +1,16 @@
 
-import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
-import * as React from 'react';
-import EmailTemplate from '@/app/components/EmailTemplate';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { addDoc, collection, getFirestore } from "firebase/firestore"
+import firebase_app from "../../utils/firebase"
 
-export async function POST() {
-  try {
-    const data = await resend.emails.send({
-      from: 'Acme <kathepachecobaca@gmail.com>',
-      to: ['kathepachecobaca@gmail.com'],
-      subject: "Hello world",
-      react: EmailTemplate({ firstName: "John" }) as React.ReactElement,
-    });
+const db = getFirestore(firebase_app)
+export const handleForm = async (values:any) => {
+    try {
+        let res = await addDoc(collection(db, 'contact'), {
+            values
+        })
 
-    return NextResponse.json(data);
-  } catch (error) {
-    return NextResponse.json({ error });
-  }
+    } catch (err:any) {
+        throw new Error(err)
+    }
 }

@@ -1,9 +1,12 @@
 "use client"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
+
 import { TypeAnimation } from "react-type-animation"
 
 
 const HeaderSection = () => {
+    const navigate = useRouter()
     return (
         <section>
             <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -32,8 +35,11 @@ const HeaderSection = () => {
                         {`I am a Peruvian currently based in Argentina. I like art and technology.`}
                     </p>
                     <div>
-                        <button className="px-6 w-full lg:w-fit  py-3 rounded-full lg:mr-4 mr-0 bg-white border text-black hover:bg-transparent hover:text-slate-200 transition duration-300">{`Let's connect`}</button>
+                        <button onClick={()=>navigate.push('#contact')} className="px-6 w-full lg:w-fit  py-3 rounded-full lg:mr-4 mr-0 bg-white border text-black hover:bg-transparent hover:text-slate-200 transition duration-300">{`Let's connect`}</button>
+                        <a href="/profilePic/Katherine_Pacheco.pdf" target='_blank'>
+
                         <button className="px-6 transition ease-in-out w-full lg:w-fit py-3 duration-300 rounded-full border hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r hover:from-green-500 hover:text-black/50 hover:to-yellow-300 hover:shadow-slate-800 mt-3 delay-150 lg:mt-0">Download CV</button>
+                        </a>
                     </div>
                 </div>
                 <div className="col-span-5 place-self-center mt-4 lg:mt-0">
