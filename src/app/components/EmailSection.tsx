@@ -16,6 +16,7 @@ const EmailSection = () => {
         },
         onSubmit: values => handleForm(values )
     })
+    
     const handleForm = async (values: TUserInformation, ) => {
         try {
             let res = await addDoc(collection(db, 'contact'), {
