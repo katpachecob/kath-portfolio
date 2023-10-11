@@ -11,10 +11,10 @@ const Navbar = () => {
     return (
         <nav className='fixed top-0 left-0 right-0 z-10 bg-black opacity-80'>
             <div className='flex flex-wrap items-center justify-between mx-auto p-6'>
-                <Link href={'/'}>Logo</Link>
+                <Link href={'/'} className='font-bold text-3xl'>K•</Link>
                 <div className='mobile block md:hidden' onClick={() => setOpen(!open)}>
                     {
-                        open ? (
+                        !open ? (
                             <button><Bars3Icon className='w-5 h-5 text-white' /></button>
                         ) : (<button><XMarkIcon className='w-5 h-5 text-white' /></button>)
                     }
