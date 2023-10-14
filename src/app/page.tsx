@@ -7,11 +7,11 @@ import ContactSection from './components/ContactSection'
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-black">
-      <Navbar/>
+      <Navbar />
       <div className=' container mx-auto px-6 py-20  justify-center'>
-<HeaderSection/>
-<AboutSection/>
-<ContactSection/>
+        <HeaderSection />
+        <AboutSection />
+        <ContactSection />
       </div>
     </main>
   )
